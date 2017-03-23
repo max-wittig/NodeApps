@@ -1,0 +1,13 @@
+{
+  "name": "CountServer",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "*",
+    "express": "*",
+    "jquery": "*"
+  },
+  "scripts": {
+    "install": "",
+    "start": "nodejs server/server.js"
+  }
+}

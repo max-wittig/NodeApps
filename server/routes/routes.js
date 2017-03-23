@@ -6,5 +6,4 @@ module.exports = function (app)
     {
         res.sendFile("html/index.html")
     })
-    require("./counter")(app)
 }
