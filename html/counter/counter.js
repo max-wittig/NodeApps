@@ -14,13 +14,14 @@ $(document).ready(function ()
     counter.click(function ()
     {
         socket.emit('+')
+        return false
     })
 
     //right click
     counter.contextmenu(function ()
     {
         socket.emit('-')
-        return false;
+        return false
     })
 })
 

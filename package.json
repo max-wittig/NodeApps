@@ -4,7 +4,8 @@
   "dependencies": {
     "socket.io": "*",
     "express": "*",
-    "jquery": "*"
+    "jquery": "*",
+    "bootstrap": "*"
   },
   "scripts": {
     "install": "",
