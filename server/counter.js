@@ -1,6 +1,6 @@
 'use strict'
 
-let currentNumber = 1
+let currentNumber = 0
 
 module.exports = function (io)
 {
@@ -11,6 +11,13 @@ module.exports = function (io)
         socket.on("+", function ()
         {
             currentNumber++
+            io.emit('number', currentNumber)
+            console.log("CurrentNumber: " + currentNumber)
+        })
+
+        socket.on("-", function ()
+        {
+            currentNumber--
             io.emit('number', currentNumber)
             console.log("CurrentNumber: " + currentNumber)
         })
