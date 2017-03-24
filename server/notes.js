@@ -18,6 +18,7 @@ module.exports = function (io)
         {
             let note = new Note(title, content)
             noteManager.addNote(note)
+            publishNotes()
             console.log("Note added with title: " + title)
         })
     })

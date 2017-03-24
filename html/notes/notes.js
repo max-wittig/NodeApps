@@ -8,6 +8,7 @@ $(document).ready(function ()
 
     socket.on('noteJSON', function (noteJSON)
     {
+        notesContainer.innerHTML = ""
         console.log(noteJSON);
         let notesList = JSON.parse(noteJSON)
         for(let i=0; i < notesList.length; i++)
@@ -31,7 +32,7 @@ $(document).ready(function ()
 
         let panelHeader = document.createElement("div")
         panelHeader.classList.add("panel-heading")
-        panelHeader.textContent = note.content
+        panelHeader.textContent = note.title
         panel.appendChild(panelHeader)
 
         let panelBody = document.createElement("div")
