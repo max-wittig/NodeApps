@@ -4,11 +4,16 @@ module.exports = class NoteManager
 {
     constructor()
     {
-        this.notes = []
+        this._notes = []
     }
 
     addNote(noteObject)
     {
-        this.notes.push(noteObject)
+        this._notes.push(noteObject)
+    }
+
+    get notes()
+    {
+        return this._notes;
     }
 }

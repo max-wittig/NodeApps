@@ -2,3 +2,8 @@ a
 {
     font-size: 50em;
 }
+
+.border-enabled
+{
+    outline: 10px solid red;
+}
