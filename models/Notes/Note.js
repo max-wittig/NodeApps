@@ -7,7 +7,7 @@ class Note
         this.title = title
         this.content = content
         this.color = color
-        this.aliveForMs = 300000
+        this.aliveForMs = 24 * 60 * 60 * 1000
         this.lifeTime = new Date().getTime() + this.aliveForMs
     }
 

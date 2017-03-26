@@ -23,5 +23,12 @@ module.exports = function (io)
         })
     })
 
+    //check all notes for age and publish result
+    setInterval(function ()
+    {
+        noteManager.clearOldNotes()
+        publishNotes()
+    }, 60 * 60 * 1000)
+
 
 }
