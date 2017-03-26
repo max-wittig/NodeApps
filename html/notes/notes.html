@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <title>Notes</title>
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="notes.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container-fluid">
     <div class="row" style="padding: 1%">
-        <div style="padding-top: 1%;" class="col-xs-12 col-xs-push-4">
+        <div style="padding-top: 1%;" class="col-xs-8 col-xs-push-4">
             <input type="text" placeholder="Title" id="titleInput" title="TitleInput" />
             <input type="text" placeholder="Body" id="contentInput" title="BodyInput" />
-            <a href="javascript:void(0)" id="addNoteButton">Add Note</a>
+            <button class="btn btn-default btn-group-xs" href="javascript:void(0)" id="addNoteButton">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+            </button>
         </div>
-        <div class="row" id="notesContainer"></div>
     </div>
+    <div class="row" id="notesContainer"></div>
 </div>
+<script src="/models/Notes/Note.js"></script>
 <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

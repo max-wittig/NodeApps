@@ -9,7 +9,6 @@ $(document).ready(function ()
     socket.on('noteJSON', function (noteJSON)
     {
         notesContainer.innerHTML = ""
-        console.log(noteJSON);
         let notesList = JSON.parse(noteJSON)
         for(let i=0; i < notesList.length; i++)
         {
@@ -32,6 +31,8 @@ $(document).ready(function ()
 
         let panelHeader = document.createElement("div")
         panelHeader.classList.add("panel-heading")
+        if(note.color != undefined)
+            panelHeader.classList.add("panel-" + note.color)
         panelHeader.textContent = note.title
         panel.appendChild(panelHeader)
 
@@ -44,12 +45,20 @@ $(document).ready(function ()
         notesContainer.appendChild(container)
 
     }
-    
+
+    function clearInputs()
+    {
+        titleInput.value = ""
+        contentInput.value = ""
+    }
+
     $('#addNoteButton').click(function ()
     {
-        let note = { title: titleInput.value, content: contentInput.value }
-        socket.emit('note', note.title, note.content)
-        console.log("Note emited")
-        addClientNote(note)
+        let note = new Note(titleInput.value, contentInput.value)
+        if(note.title != "" && note.content != "")
+        {
+            clearInputs()
+            socket.emit('note', JSON.stringify(note))
+        }
     })
 })

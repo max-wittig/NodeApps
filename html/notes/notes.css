@@ -1,9 +1,49 @@
-a
+.panel-red
 {
-    font-size: 50em;
+    background-color: #ffcdd2 !important
 }
 
-.border-enabled
+.panel-pink
 {
-    outline: 10px solid red;
+    background-color: #f8bbd0 !important
+}
+
+.panel-purple
+{
+    background-color: #e1bee7 !important
+}
+
+.panel-lime
+{
+    background-color: #f0f4c3 !important
+}
+
+.panel-indigo
+{
+    background-color: #c5cae9 !important
+}
+
+.panel-blue
+{
+    background-color: #bbdefb !important
+}
+
+.panel-teal
+{
+    background-color: #b2dfdb !important;
+}
+
+.panel-orange
+{
+    background-color: #ffccbc !important;
+}
+
+.panel-blue-grey
+{
+    background-color: #cfd8dc !important;
+}
+
+.panel-light-green
+{
+    background-color: #dcedc8 !important;
 }

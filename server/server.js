@@ -11,5 +11,6 @@ require("./notes")(io)
 app.use("/node_modules", express.static(path.resolve('node_modules')))
 app.use("/counter", express.static(path.resolve('html/counter')))
 app.use("/notes", express.static(path.resolve('html/notes')))
+app.use("/models", express.static(path.resolve('models')))
 
 http.listen(3000)
