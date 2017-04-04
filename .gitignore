@@ -1,4 +1,4 @@
 /.idea
-CountServer.iml
+*.iml
 node_modules
 npm-debug.log

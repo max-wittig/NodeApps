@@ -23,7 +23,8 @@ $(document).ready(function ()
         container.classList.add("col-xs-6")
         container.style = "padding-top: 1%;"
 
-        let panelGroup = document.createElement("panel-group")
+        let panelGroup = document.createElement("div")
+        panelGroup.classList.add("panel-group")
         let panel = document.createElement("div")
         panel.classList.add("panel-default")
         panel.classList.add("panel")

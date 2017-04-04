@@ -1,6 +1,7 @@
 {
   "name": "NodeApps",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A collection of small nodejs applications",
   "dependencies": {
     "socket.io": "*",
     "express": "*",
