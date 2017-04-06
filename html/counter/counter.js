@@ -3,6 +3,7 @@ let counter = $('#counter');
 
 socket.on('number', function (number)
 {
+    counter.text(number)
     if(number > 0) {counter.css("color", "green")}
     if(number == 0) {counter.css("color", "black")}
     if(number < 0) {counter.css("color", "red")}
