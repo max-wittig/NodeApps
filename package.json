@@ -4,8 +4,8 @@
   "description": "A collection of small nodejs applications",
   "dependencies":
   {
-    "socket.io": "1.7.3",
-    "express": "4.15.2",
+    "socket.io": "2.0.4",
+    "express": "4.16.2",
     "jquery": "3.2.1",
     "bootstrap": "3.3.7"
   },
