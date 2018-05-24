@@ -1,16 +1,19 @@
 FROM node:10-stretch
 
-RUN groupadd node \
-  && useradd --gid node --shell /bin/bash --create-home node
+ENV APP_DIR=/opt/nodeapps
+ENV USERNAME=nodeapps
 
-WORKDIR /opt/nodeapps
+RUN groupadd $USERNAME \
+  && useradd --gid $USERNAME --shell /bin/bash --create-home $USERNAME
+
+WORKDIR $APP_DIR
 COPY package.json .
 RUN npm install
 
 COPY . .
-RUN chown -R node:node /opt/nodeapps
+RUN chown -R $USERNAME:$USERNAME $APP_DIR
 
-USER node
+USER $USERNAME
 EXPOSE 3000
 
 ENTRYPOINT ["npm"]

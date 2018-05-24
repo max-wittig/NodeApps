@@ -2,16 +2,13 @@
   "name": "NodeApps",
   "version": "1.0.0",
   "description": "A collection of small nodejs applications",
-  "dependencies":
-  {
-    "socket.io": "1.7.3",
-    "express": "4.15.2",
-    "jquery": "3.2.1",
-    "bootstrap": "3.3.7"
+  "dependencies": {
+    "socket.io": "^2.1.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "bootstrap": "^3.0.0"
   },
-  "scripts":
-  {
-    "install": "",
+  "scripts": {
     "start": "nodejs server/server.js"
   }
 }

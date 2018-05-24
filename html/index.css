@@ -1,22 +1,18 @@
-.material-icons
-{
+.material-icons {
     font-size: 500%;
     text-align: center;
 }
 
-.panel-body
-{
+.panel-body {
     text-align: center;
 }
 
-a:-webkit-any-link
-{
+a:-webkit-any-link {
     color: black;
     text-decoration: none !important;
 }
 
-a:any-link
-{
+a:any-link {
     color: black;
     text-decoration: none !important;
 }
